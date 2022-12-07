@@ -1,8 +1,8 @@
 package ua.com.alevel.test;
 
-public class Message {
+public class Aloha {
 
-    public void showMessage() {
+    public void showAloha() {
         System.out.println("Bad Hello world!!!!");
     }
 }
