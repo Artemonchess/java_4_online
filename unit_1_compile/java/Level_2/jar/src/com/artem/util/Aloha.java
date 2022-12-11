@@ -7,6 +7,5 @@ public class Aloha {
 
     public static void showAloha(String msg) {
         StringUtils fInfo = new StringUtils();
-
     }
 }

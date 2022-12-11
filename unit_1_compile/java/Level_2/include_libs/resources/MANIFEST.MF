@@ -1,0 +1,2 @@
+Main-Class: com.artem.Hoy
+Class-Path: commons-lang3-3.12.0.jar
