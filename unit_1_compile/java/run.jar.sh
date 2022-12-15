@@ -1,7 +1,7 @@
 #!/bin/sh
 
 javac -sourcepath ./src -d build/classes/ -cp ./lib/commons-lang3-3.12.0.jar src/com/artem/util/Aloha.java src/com/artem/Hoy.java
-cd lib || exit
+cd lib
 jar xf commons-lang3-3.12.0.jar
 cp -rf com ../build/classes
 cd ..
@@ -13,6 +13,6 @@ echo 'variant 2'
 rm -rf lib/com
 rm -rf lib/META-INF
 javac -sourcepath ./src -d build/classes/ -cp ./lib/commons-lang3-3.12.0.jar src/com/artem/util/Aloha.java src/com/artem/Hoy.java
-cp -r lib/*.jar build/jar
+cp -r lib/.jar build/jar
 jar cvfm build/jar/hoy.jar resources/MANIFEST.MF -C build/classes .
 java -jar build/jar/hoy.jar
