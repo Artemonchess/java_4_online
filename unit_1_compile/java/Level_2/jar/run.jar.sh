@@ -1,7 +1,7 @@
 #!/bin/sh
 
 javac -sourcepath ./src -d build/classes/ -cp ./lib/commons-lang3-3.12.0.jar src/com/artem/util/Aloha.java src/com/artem/Hoy.java
-cd lib
+cd lib || exit
 jar xf commons-lang3-3.12.0.jar
 cp -rf com ../build/classes
 cd ..
