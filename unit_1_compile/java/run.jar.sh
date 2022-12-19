@@ -1,18 +1,39 @@
 #!/bin/sh
 
-javac -sourcepath ./src -d build/classes/ -cp ./lib/commons-lang3-3.12.0.jar src/com/artem/util/Aloha.java src/com/artem/Hoy.java
-cd lib
-jar xf commons-lang3-3.12.0.jar
-cp -rf com ../build/classes
-cd ..
-jar cvfm build/jar/Hoy.jar resources/MANIFEST.MF -C build/classes .
-jar tf build/jar/Hoy.jar
-java -jar build/jar/Hoy.jar
+echo 'run level 1'
 
-echo 'variant 2'
-rm -rf lib/com
-rm -rf lib/META-INF
-javac -sourcepath ./src -d build/classes/ -cp ./lib/commons-lang3-3.12.0.jar src/com/artem/util/Aloha.java src/com/artem/Hoy.java
-cp -r lib/.jar build/jar
-jar cvfm build/jar/hoy.jar resources/MANIFEST.MF -C build/classes .
-java -jar build/jar/hoy.jar
+echo 'run simple'
+cd ./level_1/simple
+javac Series.java
+java Series
+
+cd ../
+
+echo 'run package'
+cd ./package
+javac ua/com/alevel/Series.java
+java ua.com.alevel.Series
+
+cd ../
+
+echo 'run separate packages'
+cd ./separate_packages
+javac ua/com/alevel/Series.java
+java ua.com.alevel.Series
+
+cd ../
+
+echo 'run minimal proj'
+cd ./minimal_proj
+javac -sourcepath ./src -d build/classes ./src/ua/com/alevel/Series.java
+java -cp build/classes ua.com.alevel.Series
+
+cd ../
+
+echo 'run med proj a'
+cd ./med_proj
+javac -sourcepath ./src -d build/classes ./src/ua/com/alevel/Series.java
+jar cvfm build/jar/series.jar resources/MANIFEST.MF -C build/classes .
+java -jar build/jar/series.jar
+
+cd ../../
