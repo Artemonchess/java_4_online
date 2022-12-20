@@ -20,7 +20,7 @@
     </dependencies>
 
     <build>
-        <finalName>unit_2_about_class</finalName>
+        <finalName>unit_4_about_oop</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
