@@ -11,7 +11,8 @@
     <properties>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.shade.plugin.version>3.2.4</maven.shade.plugin.version>
     </properties>
 
@@ -20,7 +21,7 @@
     </dependencies>
 
     <build>
-        <finalName>unit_4_about_oop</finalName>
+        <finalName>about_class_new</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -29,9 +30,10 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                </configuration>
-            </plugin>
 
+                </configuration>
+
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -52,6 +54,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>
