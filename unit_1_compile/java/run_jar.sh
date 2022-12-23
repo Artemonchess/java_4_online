@@ -3,7 +3,7 @@
 echo 'run level 1'
 
 echo 'run simple'
-cd ./level_1/simple
+cd ./Level_1/simpl
 javac Hoy.java
 java Hoy
 
@@ -17,7 +17,7 @@ java ua.com.alevel.Hoy
 cd ../
 
 echo 'run separate packages'
-cd ./separate_packages
+cd ./separate_package
 javac ua/com/alevel/Hoy.java
 java ua.com.alevel.Hoy
 
